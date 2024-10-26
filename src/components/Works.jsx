@@ -16,7 +16,7 @@ const ProjectCard = ({
   image,
   source_code_link
 }) => (
-  <motion.div variants={fadeIn("", "spring", index * 0.5, 0.75)}>
+  <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
     <Tilt
       options={{
         max: 45,
@@ -59,14 +59,14 @@ const ProjectCard = ({
       </div>
     </Tilt>
   </motion.div>
-)
+);
 
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <p className={`${styles.sectionSubText} text-center`}>My Work</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Projects.</h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p
@@ -76,7 +76,7 @@ const Works = () => {
           edit as soon as site is completed.
         </motion.p>
       </div>
-      <div className="mt-20 lfex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard
             key={`project-${index}`}
@@ -84,10 +84,9 @@ const Works = () => {
             {...project}
           />
         ))}
-
       </div>
     </>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Works, "");
