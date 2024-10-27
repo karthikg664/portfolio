@@ -1,3 +1,4 @@
+import { title } from "framer-motion/client";
 import {
     mobile,
     backend,
@@ -29,6 +30,14 @@ import {
     {
       id: "about",
       title: "About",
+    },
+    {
+      id: "experience",
+      title: "Experience",
+    },
+    {
+      id: "tech",
+      title: "Skills",
     },
     {
       id: "work",
