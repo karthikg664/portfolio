@@ -50,14 +50,14 @@ const Navbar = () => {
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
+          {navLinks.map((link) => (
             <li
-              key={nav.id}
-              className={`${active === nav.title ? "text-white" : "text-secondary"
+              key={link.id}
+              className={`${active === link.title ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => setActive(link.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>

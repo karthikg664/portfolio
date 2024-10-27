@@ -8,7 +8,7 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={3.25} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -27,6 +27,7 @@ const Computers = ({ isMobile }) => {
     </mesh>
   );
 };
+
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 

@@ -39,13 +39,13 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Overview.</h2>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-full leading-[30px] text-center"
+        className="mt-4 text-secondary text-[17px] max-w-half leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
